@@ -1,0 +1,23 @@
+# linters
+# tests TODOOOOOOOO
+
+#try to run this pipeline first
+
+# docker build .
+# upload to central repo (ecr, docker hub, cloudsmith) 
+# create a space for my container to run ( ec2, ecs...)
+# download the image to my infra and run it : docker run -it -p 8081:8081 c4a37d58b5eb - ??
+# ip adress and a port of ec2
+
+steps:
+  - label: 'lint'
+    commands:
+      - echo cfn-lint and testing
+    agents:
+      queue: helabela
+
+  - label: 'build docker images '
+    commands:
+      - ./run.sh
+    agents:
+      queue: helabela
