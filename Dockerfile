@@ -10,6 +10,8 @@ COPY ./program /ops
 
 ARG SHA
 ENV SHA=${SHA:-unknown}
+ARG TIME
+ENV TIME=${TIME:-unknown}
 RUN go build
 
 EXPOSE 8081
